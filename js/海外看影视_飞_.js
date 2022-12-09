@@ -1,0 +1,22 @@
+var rule = {
+title: '海外看影视',
+host: 'https://haiwaiys.cc',
+url: '/vodshow/fyclass--------fypage---.html',     
+searchUrl: '/vodsearch/**----------fypage---.html',
+searchable: 2,
+quickSearch: 0,
+filterable: 0,
+headers: {'User-Agent': 'UC_UA',},
+class_name:'电影&电视剧&综艺&动漫&记录片',
+class_url:'1&2&3&4&21',
+推荐:'.module-items&&.module-item;a&&title;img&&data-src;.module-item-text&&Text;a&&href',
+一级:'.module-items .module-item;a&&title;img&&data-src;.module-item-text&&Text;a&&href',
+二级: {"title": "h1&&Text;.tag-link&&Text",
+                "img": ".module-item-pic&&img&&data-src",
+                "desc": ".video-info-items:eq(0)&&Text;.video-info-items:eq(1)&&Text;.video-info-items:eq(2)&&Text;.video-info-items:eq(3)&&Text",
+                "content": ".vod_content&&Text",
+                "tabs": ".module-tab-item",
+                "lists": ".module-player-list:eq(#id)&&.scroll-content&&a"
+            },
+            搜索: '.module-items .module-search-item;a&&title;img&&data-src;.video-serial&&Text;a&&href',
+ }
